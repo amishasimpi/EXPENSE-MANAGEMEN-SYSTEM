@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        .container {
+            background: #222;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        .input-group {
+            margin: 10px 0;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Login</h1>
+        <div class="input-group">
+            <input type="text" id="adminUsername" placeholder="Admin Username">
+        </div>
+        <div class="input-group">
+            <input type="password" id="adminPassword" placeholder="Admin Password">
+        </div>
+        <button onclick="validateAdmin()">Login</button>
+    </div>
+
+    <script>
+        function validateAdmin() {
+            let username = document.getElementById("adminUsername").value;
+            let password = document.getElementById("adminPassword").value;
+
+            if (username === "admin" && password === "password123") {
+                alert("Admin Login Successful!");
+                window.location.href = "admin_dashboard.html";
+            } else {
+                alert("Invalid Admin Credentials");
+            }
+        }
+    </script>
+</body>
+</html>
